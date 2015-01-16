@@ -1,0 +1,24 @@
+{
+  "name": "testudo",
+  "version": "0.0.1",
+  "description": "Acceptance testing ez mode",
+  "main": "lib/testudo.js",
+  "bin": {
+    "testudo": "./bin/testudo"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Clifford <ericgclifford@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^0.9.0",
+    "chai": "^1.10.0",
+    "chai-as-promised": "^4.1.1",
+    "cucumber": "^0.4.7",
+    "minimist": "^1.1.0",
+    "phantomjs": "^1.9.13",
+    "selenium-launcher": "^1.1.11",
+    "wd": "^0.3.11"
+  }
+}

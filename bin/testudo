@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+var Testudo = require('../lib/testudo.js');
+var minimist = require('minimist');
+
+var argv = minimist(process.argv.slice(2), {
+  'default': {
+    "browser": "phantomjs",
+    "platform": "ANY",
+    "name": "",
+    "tags": [],
+    "debug": false,
+    "remote": "http://localhost:4444/wd/hub",
+    "config": "features/testudo.js"
+  },
+  'boolean': true
+});
+
+try {
+  var testudo = new Testudo(argv);
+  testudo.run(function(err) {
+    if(err)
+      process.exit(2);
+    else
+      process.exit(0);
+  });
+} catch (ex) {
+  process.stderr.write(ex.stack + '\n');
+  process.exit(2);
+}
