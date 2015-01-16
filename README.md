@@ -11,10 +11,10 @@ easy to use package.
 ## Features
 
 - Write your feature specs and step definitions with CucumberJS
-- Use the powerful WD fluent chainable API for composable test executions
+- Use the powerful WD fluent chain-able API for composable test executions
 - Write your assertions beautifully in a human readable format using the power of Chai
 - Leverage the power of PhantomJS, Selenium, SauceLabs for seamless integration between optimized local development
-and full continious integration support.
+and full continuous integration support.
 
 ## Quick Start
 
