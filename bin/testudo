@@ -10,7 +10,7 @@ var argv = minimist(process.argv.slice(2), {
     "tags": [],
     "debug": false,
     "remote": "http://localhost:4444/wd/hub",
-    "config": "features/testudo.js"
+    "path": "features"
   },
   'boolean': true
 });

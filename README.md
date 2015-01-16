@@ -5,12 +5,9 @@ fun and easy.
 
 ## Features
 
-- Support for parameterized media image services such as Adobe Scene7
-- Support for declarative images per breakpoint if you want to serve your own responsive images
-- Built in customizable breakpoint detection/notification for use in responsive grids such as
-those found in Bootstrap and Foundation
-- No third party libraries required
-- Non blocking script
+- Write your tests fluently using Chai, and Chai As Promised
+- Run tests in local Phantom, Selenium Grid or SauceLabs
+- All CLI options for CucumberJS, Selenium, PhantomJS are proxied through with reasonable defaults
 
 ## Quick Start
 
@@ -26,7 +23,12 @@ npm install testudo
 
 ```
  --browser
- --config
+ --path
+ --debug
+ --remote
+ --platform
+ --name
+ --tags
 
 ```
 
@@ -37,6 +39,11 @@ machine such as `chrome`, `firefox` or any browser available to SauceLabs.
 
 Type: `String` Default: **phantomjs**
 
+#### --path
+
+The browser to use. The available options are `phantomjs`, any browser on your local
+machine such as `chrome`, `firefox` or any browser available to SauceLabs.
+
 #### --remote
 
 The path to the your own Selenium Grid or SauceLabs hub url. Ignore this if your using
@@ -46,7 +53,11 @@ Type: `String` Default: **http://localhost:4444/wd/hub**
 
 ### Grunt
 
+**plugin coming soon**
+
 ### Gulp
+
+**plugin coming soon**
 
 ### Contributing
 
