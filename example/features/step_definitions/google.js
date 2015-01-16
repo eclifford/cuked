@@ -1,5 +1,4 @@
 module.exports = function () {
-  // this.World = require('../../lib/cucumberjs/world.js').World;
 
   this.Given("I am on Google", function(callback) {
     this.browser
@@ -11,13 +10,14 @@ module.exports = function () {
     this.browser
       .elementByName('q')
       .type(query + '\n')
-      .nodeify(callback)
+      .nodeify(callback);
   });
 
   this.Then('I see a link to "$url"', function(url, callback) {
     this.browser
       .waitForElementByCss('a[href*="' + url + '"]')
-      .nodeify(callback)
+      .should.eventually.exist
+      .nodeify(callback);
   });
 
 };

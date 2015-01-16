@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var Testudo = require('../lib/testudo.js');
+var Cuked = require('../lib/cuked.js');
 var minimist = require('minimist');
 
 var argv = minimist(process.argv.slice(2), {
@@ -16,8 +16,8 @@ var argv = minimist(process.argv.slice(2), {
 });
 
 try {
-  var testudo = new Testudo(argv);
-  testudo.run(function(err) {
+  var cuked = new Cuked(argv);
+  cuked.run(function(err) {
     if(err)
       process.exit(2);
     else

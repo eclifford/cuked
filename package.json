@@ -1,15 +1,25 @@
 {
-  "name": "testudo",
+  "name": "cuked",
   "version": "0.0.1",
   "description": "Acceptance testing ez mode",
-  "main": "lib/testudo.js",
+  "keywords": [
+    "bdd",
+    "atdd",
+    "cucumber",
+    "wd",
+    "selenium",
+    "phantom",
+    "testing",
+    "saucelabs"
+  ],
+  "author": "Eric Clifford <ericgclifford@gmail.com>",
+  "main": "lib/cuked.js",
   "bin": {
-    "testudo": "./bin/testudo"
+    "cuked": "./bin/cuked"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/_mocha"
   },
-  "author": "Eric Clifford <ericgclifford@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "async": "^0.9.0",
@@ -20,5 +30,8 @@
     "phantomjs": "^1.9.13",
     "selenium-launcher": "^1.1.11",
     "wd": "^0.3.11"
+  },
+  "devDependencies": {
+    "mocha": "^2.1.0"
   }
 }

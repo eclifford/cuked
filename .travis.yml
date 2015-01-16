@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+- '0.10'
+install:
+- npm install
+env:
+  global:
+  - secure: EibVel4DVG6pPSn4Yv5LyFn8r/3zWRkK6I5sCmNRXlnIiiXtca6FWbU23GAczgcbmCOoy9iceVfycqVc/8dnGueie+usBHCII4Eq3gkxdsWUjmwvUsjI9Guz8h02vY/1RzaUg0AZlVMjCgoqd7vRt/DGyl4gjxjt9BP/l9MbATQ=
