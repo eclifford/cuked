@@ -9,8 +9,12 @@ var argv = minimist(process.argv.slice(2), {
     "name": "",
     "tags": [],
     "debug": false,
-    "remote": "http://localhost:4444/wd/hub",
-    "path": "features"
+    "host": "localhost",
+    "port": "4444",
+    "path": "features",
+    "user": "",
+    "key": "",
+    "log": "silent"
   },
   'boolean': true
 });
@@ -18,10 +22,12 @@ var argv = minimist(process.argv.slice(2), {
 try {
   var cuked = new Cuked(argv);
   cuked.run(function(err) {
-    if(err)
+    if (err) {
       process.exit(2);
-    else
+    }
+    else {
       process.exit(0);
+    }
   });
 } catch (ex) {
   process.stderr.write(ex.stack + '\n');

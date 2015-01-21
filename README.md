@@ -1,18 +1,17 @@
 # Cuked
 [![Build Status](https://travis-ci.org/eclifford/cuked.svg?branch=master)](https://travis-ci.org/eclifford/cuked) ![](https://david-dm.org/eclifford/cuked.svg)
 
-> Cuked is an automated testing framework combining the power of CucumberJS, PhantomJS, Saucelabs, WD and Chai to make writing tests
+> Cuked is an automated testing framework combining the power of CucumberJS, PhantomJS, Saucelabs, Webdriver.io and Chai to make writing tests
 fun and easy.
 
-Cuked is an alternative to monolithic testing frameworks that trap you into proprietary abstractions and API's. Cuked is purpose
-built to allow you to get the most out the best existing tools by synergizing them together in one
-easy to use package.
+Cuked is an alternative to monolithic testing frameworks that trap you into proprietary abstractions and API's. Cuked is built from the ground to
+synergize CucumberJS with the other industry standard tools you know and love.
 
 ## Features
 
-- Write your feature specs and step definitions with CucumberJS
-- Use the powerful WD fluent chain-able API for composable test executions
-- Write your assertions beautifully in a human readable format using the power of Chai
+- Write your feature specs and step definitions with [CucumberJS](https://github.com/cucumber/cucumber-js)
+- Use the powerful [Webdriver.io](http://webdriver.io/) fluent chain-able API for composable test executions
+- Write your assertions beautifully in a human readable format using the power of [Chai](http://chaijs.com/)
 - Leverage the power of PhantomJS, Selenium, SauceLabs for seamless integration between optimized local development
 and full continuous integration support.
 
@@ -26,7 +25,7 @@ npm install cuked -g
 ### CLI
 
 Cuked provides just enough native options to better facilitate the synergy between **CucumberJS**,
-**PhantomJS**, **Selenium**, **SauceLabs**, and **WD.js**.
+**PhantomJS**, **Selenium**, **SauceLabs**, and **Webdriver.io**.
 
 However, in an effort to keep **Cuked** as flexable as possible all other CLI options are passed through
 to their respective binaries. This means that all CLI options from **CucumberJS**, **PhantomJS**, and **Selenium** are
@@ -60,7 +59,7 @@ The path to your local `CucumberJS` features directory as well as `cuked.js` con
   cuked --path='tests/features'
 ```
 
-#### remote
+#### host
 
 The path to the your own Selenium Grid or SauceLabs hub url. Ignore this if your using
 `phantomjs` or local `selenium`.
