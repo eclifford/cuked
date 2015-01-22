@@ -5,7 +5,7 @@
 fun and easy.
 
 Cuked is an alternative to monolithic testing frameworks that trap you into proprietary abstractions and API's. Cuked is built from the ground to
-synergize CucumberJS with the other industry standard tools you know and love.
+synergize CucumberJS with the other industry standard micro-libraries you know and love.
 
 ## Features
 
@@ -49,7 +49,7 @@ available to you through **Cuked**.
 
 #### path
 
-The path to your local `CucumberJS` features directory as well as `cuked.js` configuration.
+The path to your local `CucumberJS` features directory.
 
 - **command**: `--path`
 - **default**: `./features`
@@ -57,19 +57,6 @@ The path to your local `CucumberJS` features directory as well as `cuked.js` con
 ```
   cuked --path='tests/acceptance/features'
   cuked --path='tests/features'
-```
-
-#### host
-
-The path to the your own Selenium Grid or SauceLabs hub url. Ignore this if your using
-`phantomjs` or local `selenium`.
-
-- **command**: `--remote`
-- **default**: `http://localhost:4444/wd/hub`
-- **example usage:**
-```
-  cuked --remote=http://yourserver:yourport/wd/hub
-  cuked --remote=http://user:key@ondemand.saucelabs.com/wd/hub
 ```
 
 #### browser
@@ -88,6 +75,52 @@ machine such as `chrome`, `firefox` or any browser available to SauceLabs.
   - Selenium comes bundled with a driver for `firefox`. For other browsers
   you will have to download those drivers.
   - [full list of 3rd party bindings](http://www.seleniumhq.org/download/)
+
+#### host
+
+The host domain that points to your Selenium Grid or SauceLabs hub url. Ignore this if your using
+`phantomjs` or local `selenium`.
+
+- **command**: `--host`
+- **default**: `localhost`
+- **example usage:**
+```
+cuked --host=ondemand.saucelabs.com
+```
+
+#### port
+
+The port that used in conjunction with your host. Ignore this if your using
+`phantomjs` or local `selenium`.
+
+- **command**: `--port`
+- **default**: `4444`
+- **example usage:**
+```
+cuked --port=80
+```
+
+#### user
+
+The user credentials to send to SauceLabs or authenticated grid environment.
+
+- **command**: `--user`
+- **default**: ``
+- **example usage:**
+```
+cuked --user=eric
+```
+
+#### key
+
+The accessKey to send to SauceLabs or authenticated grid environment.
+
+- **command**: `--key`
+- **default**: ``
+- **example usage:**
+```
+cuked --key=112D69BD-5818-42F3-A3E9-493600AEC57D
+```
 
 
 #### platform
@@ -132,15 +165,15 @@ a test name. In SauceLabs for instance this will appear in your test rules dashb
 cuked --name='Acceptance Tests' --browser='firefox' --remote='http://user:key@ondemand.saucelabs.com/wd/hub'
 ```
 
-#### debug
+#### log
 Whether or not to display debug information. Namely `Webdriver` commands.
 
-- **command**: `--debug`
-- **default**: `false`
+- **command**: `--log`
+- **default**: `silent`
+- **options**: `silent`, `command`
 - **example usage**:
 ```
-cuked --debug'
-cuked --debug=true'
+cuked --log=command
 ```
 
 ## FAQ
@@ -149,7 +182,7 @@ cuked --debug=true'
 
 ### Grunt
 
-**plugin coming soon**
+[grunt-cuked](https://github.com/eclifford/grunt-cuked)
 
 ### Gulp
 
