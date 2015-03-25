@@ -1,6 +1,6 @@
 {
   "name": "cuked",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Acceptance testing ez mode",
   "keywords": [
     "bdd",
@@ -13,27 +13,31 @@
     "saucelabs"
   ],
   "author": "Eric Clifford <ericgclifford@gmail.com>",
+  "repository": {
+    "type" : "git",
+    "url" : "http://github.com/eclifford/cuked"
+  },
   "main": "lib/cuked.js",
   "bin": {
     "cuked": "./bin/cuked"
   },
   "scripts": {
-    "test": "./node_modules/.bin/_mocha"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "license": "MIT",
   "dependencies": {
-    "async": "^0.9.0",
-    "chai": "^1.10.0",
+    "async": "~0.9.0",
+    "chai": "~1.10.0",
     "chai-as-promised": "~4.1.1",
-    "cucumber": "^0.4.7",
-    "minimist": "^1.1.0",
-    "phantomjs": "^1.9.13",
-    "saucelabs": "^0.1.1",
-    "selenium-launcher": "^1.1.11",
-    "wd": "^0.3.11",
-    "webdriverio": "^2.4.3"
+    "cucumber": "~0.4.7",
+    "minimist": "~1.1.0",
+    "phantomjs": "~1.9.13",
+    "saucelabs": "~0.1.1",
+    "selenium-launcher": "~1.1.11",
+    "wd": "~0.3.11",
+    "webdriverio": "~2.4.3"
   },
   "devDependencies": {
-    "mocha": "^2.1.0"
+    "mocha": "~2.1.0"
   }
 }
